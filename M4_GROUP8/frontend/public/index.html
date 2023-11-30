@@ -1,0 +1,66 @@
+<!-- public/index.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Welcome to Auditor 1.0!</h1>
+    <form>
+        <span>
+            <h2>Choose the file format</h2>
+            <select id="fileType" name="fileType">
+                <option value="1" selected>.wav</option>
+                <option value="2">.pcm</option>
+            </select>
+
+            <h2>Enter the target file name</h2>
+            <input type="text" id="inputFile" name="inputFile"><br>
+
+            <h2>Please choose the audio effect you want</h2>
+            <input type="radio" id="one" name="effectChoice" value="1">
+            <label for="one">Convert file between wav and pcm</label><br>
+
+            <input type="radio" id="two" name="effectChoice" value="2">
+            <label for="two">Separate the channels</label><br>
+
+            <input type="radio" id="three" name="effectChoice" value="3">
+            <label for="three">Intercept part of the audio</label><br>
+
+            <input type="radio" id="four" name="effectChoice" value="4">
+            <label for="four">Change delay speed</label><br>
+
+            <input type="radio" id="five" name="effectChoice" value="5">
+            <label for="five">Change the volume</label><br>
+
+            <input type="radio" id="six" name="effectChoice" value="6">
+            <label for="six">Add an echo effect</label><br>
+
+            <input type="radio" id="seven" name="effectChoice" value="7">
+            <label for="seven">Add chorus effect</label><br>
+
+            <input type="radio" id="eight" name="effectChoice" value="8">
+            <label for="eight">Reverse the audio</label><br>
+        </span>
+        <span>
+            <h2>Intercept Start and Length Respectively</h2>
+            <h3>Leave blank if not dealing with Intercept Effect</h3>
+            <input type="number" id="interceptStart" name="interceptStart" value="0"><br>
+            <input type="number" id="interceptLength" name="interceptLength" value="0"><br>
+
+            <h2>Speed Change Multiplier</h2>
+            <h3>Leave blank if not dealing with Speed Effect</h3>
+            <input type="number" id="speedChange" name="speedChange" value="0"> <br>
+
+            <h2>Volume Multiplier</h2>
+            <h3>Leave blank if not dealing with Volume Effect</h3>
+            <input type="number" id="volumeMultiply" name="volumeMultiply" value="0"> <br>
+        </span>
+        <button type="submit" onclick="features()">Submit</button>
+    </form>
+    <script src="app.js"></script>
+</body>
+</html>
